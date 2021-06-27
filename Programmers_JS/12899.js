@@ -6,3 +6,7 @@ function solution(n) {
     }
     return answer;
 }
+
+/*
+let solution = (n) => n-- ? solution(Math.floor(n/3)) + '124'[n%3] : '';
+*/
