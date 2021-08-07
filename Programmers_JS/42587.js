@@ -12,13 +12,14 @@ function solution(priorities, location) {
                 idx = toIndex(idx-1);
             }
         }
-        return idx;
+        return toIndex(idx+1);
     };
     let tgPrior = priorities[location], answer = 1;
     let idx = getLastIndex(tgPrior+1, 0);
+    for(let i = tgPrior+1; i<10; i++) answer += counts[i];
     while(idx != location) {
-        idx = toIndex(idx+1);
         if(priorities[idx] === tgPrior) answer++;
+        idx = toIndex(idx+1);
     }
     return answer;
 }
