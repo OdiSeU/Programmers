@@ -31,10 +31,7 @@ function solution(line) {
     }
 
     let answer = Array.from(Array(maxY-minY+1), ()=> Array(maxX-minX+1).fill('.'));
-    for(let [x, y] of stars) {
-        console.log(x, y, -y+minY, x-minX);
-        //answer[-y+minY][x-minX] = '*';
-    }
+    for(let [x, y] of stars) answer[maxY-y][x-minX] = '*';
 
     return answer.map(v => v.join(''));
 }
