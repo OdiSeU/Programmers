@@ -1,3 +1,10 @@
+// https://school.programmers.co.kr/learn/courses/30/lessons/181881
+
+/**
+ *
+ * @param {number[]} arr
+ * @returns
+ */
 function solution(arr) {
     let answer = 0;
     const getX = (n) => {
